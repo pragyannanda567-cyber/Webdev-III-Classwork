@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const tourController = require('../Controller/tourController');
-
-//Route to get all tours
-router.get("/tours",tourController.getAllTours);
-
-module.exports = router
+router.get('/tours', tourController.getAllTours);
+router.get('/tours/:id', tourController.getTourById);
+router.get("/tours/search",tourController.getToursByQuery);
+module.exports = router;
