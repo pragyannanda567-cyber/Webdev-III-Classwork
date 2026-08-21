@@ -18,6 +18,13 @@ const getByQuery = (query) => {
     );
 };
 
+const save = (newTour)=>{
+    const tours = getAll();
+    tours.push(newTour);
+    fs.writeFileSync(toursFilePath,JSON.stringify(tours));
+    
+}
+
 module.exports = {
     getAll,
     getById,

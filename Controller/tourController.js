@@ -20,15 +20,30 @@ const getToursByQuery = (req, res) => {
     res.json(tours);
 };
 
-const save = (tour) => {
+// const save = (tour) => {
+//     const tours = tourModel.getAll();
+//     tours.push(tour);
+//     fs.writeFileSync(toursFilePath, JSON.stringify(tours, null, 2));
+// }
+
+const saveTours = (req, res) => {
+    const tour = req.body;
+
     const tours = tourModel.getAll();
     tours.push(tour);
-    fs.writeFileSync(toursFilePath, JSON.stringify(tours, null, 2));
+
+    res.status(201).json({ message: 'Created!!!' });
 }
+
+/* const updateTour = (req,res)=>{
+    const id = req.params.id;
+    const data = req.body;
+    tourModel
+} */
 
 module.exports = {
     getAllTours,
     getTourById,
     getToursByQuery,
-    save    
+    saveTours
 };
