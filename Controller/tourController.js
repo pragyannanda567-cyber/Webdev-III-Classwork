@@ -41,9 +41,19 @@ const saveTours = (req, res) => {
     tourModel
 } */
 
+const deleteTourByID = (req,res)=>{
+    const id = path.parseInt
+    const result = tourModel.deleteTour(id);
+    if(!result){
+        return res.status(404).json({message:"Tour not Found"})
+    }
+}
+
+
 module.exports = {
     getAllTours,
     getTourById,
     getToursByQuery,
-    saveTours
+    saveTours,
+    deleteTourByID
 };

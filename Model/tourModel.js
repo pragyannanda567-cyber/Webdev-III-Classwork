@@ -25,8 +25,20 @@ const save = (newTour)=>{
     
 }
 
+const deleteTour = (id)=>{
+    const tours = getAll();
+    const index = tours.findIndex(tour => tour.id === id);
+    if(index === -1){
+        return null;
+    }
+    tours.splice(index,1);
+    fs.writeFileSync(toursFilePath,JSON.stringify(tours));
+    return true;
+}
+
 module.exports = {
     getAll,
     getById,
-    getByQuery
+    getByQuery,
+    deleteTour
 };
