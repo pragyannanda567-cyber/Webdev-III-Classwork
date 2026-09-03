@@ -34,6 +34,7 @@ const deleteTour = (id)=>{
     tours.splice(index,1);
     fs.writeFileSync(toursFilePath,JSON.stringify(tours));
     return true;
+    
 }
 
 module.exports = {
