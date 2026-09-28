@@ -1,4 +1,4 @@
-const express = require("express");
+/* const express = require("express");
 const app = express();
 // let port = 7000;
 
@@ -39,7 +39,7 @@ const app = express();
 
 /* const tourRoutes = require('./routes/tourRoutes'); */
 
-app.use(express.json());
+/*app.use(express.json());
 /* app.use('/api', tourRoutes);*/
 /* Client --> Request --> Middleware1 --> Middleware2 --> Middleware3 --> Response */
 
@@ -49,6 +49,7 @@ app.use(express.json());
 
 } */
 
+/*
 const logger = (req,res,next)=>{
     console.log(`${req.method} ${req.url}`);
     next()
@@ -80,4 +81,9 @@ app.get("/", (req, res) => {
 
 app.listen(3000, () => {
     console.log("Server is running on port 3000");
-})
+}) */
+
+const cr = require("crypto");
+const hash = cr.createHash("sha256").update("Hello World").digest("hex")
+console.log(hash)
+console.log(cr.randomUUID())
