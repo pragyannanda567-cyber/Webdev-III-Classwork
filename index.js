@@ -83,7 +83,21 @@ app.listen(3000, () => {
     console.log("Server is running on port 3000");
 }) */
 
-const cr = require("crypto");
+/* const cr = require("crypto");
 const hash = cr.createHash("sha256").update("Hello World").digest("hex")
 console.log(hash)
-console.log(cr.randomUUID())
+console.log(cr.randomUUID()) */
+
+/* require('dotenv').config
+const process = require('process');
+console.log(process.env.PORT)
+console.log(process.env.argv) */
+
+
+/*
+require('dotenv').config
+const process = require('process');
+console.log(process.env) */
+
+/* const process = require('process');
+console.log(process) */
