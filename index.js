@@ -94,10 +94,24 @@ console.log(process.env.PORT)
 console.log(process.env.argv) */
 
 
-/*
-require('dotenv').config
-const process = require('process');
+/* require('dotenv').config
+ *//*const process = require('process');
 console.log(process.env) */
 
 /* const process = require('process');
 console.log(process) */
+const express = require('express');
+const app = express();
+const dotenv = require("dotenv");
+
+dotenv.config();
+const port = process.env.PORT || 3000;
+
+app.listen(port,()=>{
+    console.log("server is running on Port:",port)
+})
+
+app.get('/',(req,res)=>{
+    console.log(req)
+    res.send("Hello World")
+})
