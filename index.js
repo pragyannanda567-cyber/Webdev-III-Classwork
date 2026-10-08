@@ -100,7 +100,7 @@ console.log(process.env) */
 
 /* const process = require('process');
 console.log(process) */
-const express = require('express');
+/* const express = require('express');
 const app = express();
 const dotenv = require("dotenv");
 
@@ -114,4 +114,5 @@ app.listen(port,()=>{
 app.get('/',(req,res)=>{
     console.log(req)
     res.send("Hello World")
-})
+}) */
+
